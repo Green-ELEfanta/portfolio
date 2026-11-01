@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Artsiom Kobyzev. AI motion designer and creative producer: AI UGC, short dramas, hook variations, motion graphics, localization in 17 languages.">
+<meta property="og:title" content="Artsiom Kobyzev. AI Motion Designer">
+<meta property="og:description" content="Video portfolio: AI UGC, short dramas, hook variations, motion graphics, localization.">
+<meta property="og:image" content="showreel.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0c0e'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='18' fill='%23d9b770'%3EAK%3C/text%3E%3C/svg%3E">
+<title>Artsiom Kobyzev Portfolio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: cinema-dark first screen with a triptych showreel, then a work index of 9:16 tiles with filters, a hooks lab strip, a 17-language switcher, a short process row, contact. */
+:root{
+  --bg:#0c0c0e;--bg2:#131316;--card:#17171b;--line:rgba(255,255,255,.09);--fg:#f1eee7;--muted:#9a968e;--dim:#5e5b55;
+  --accent:#d9b770;--accent-ink:#17120a;--glass:rgba(12,12,14,.72);
+  --display:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){
+  --bg:#f4f2ed;--bg2:#ffffff;--card:#ffffff;--line:rgba(20,20,22,.1);--fg:#141416;--muted:#67635c;--dim:#a19d95;
+  --accent:#8a6a1e;--accent-ink:#ffffff;--glass:rgba(244,242,237,.78);color-scheme:light}}
+:root[data-theme="light"]{
+  --bg:#f4f2ed;--bg2:#ffffff;--card:#ffffff;--line:rgba(20,20,22,.1);--fg:#141416;--muted:#67635c;--dim:#a19d95;
+  --accent:#8a6a1e;--accent-ink:#ffffff;--glass:rgba(244,242,237,.78);color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+.wrap{max-width:1360px;margin:0 auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;font-weight:400}
+.serif{font-family:var(--display)}
+.mono{font-family:var(--mono)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;
+  background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:baseline;gap:10px;font-weight:600;letter-spacing:-.01em}
+.brand small{font-family:var(--mono);font-weight:400;font-size:11.5px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.nav{display:flex;gap:22px;font-size:13.5px;color:var(--muted)}
+.nav a:hover{color:var(--fg)}
+.ctl{display:flex;gap:6px;align-items:center}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;padding:2px;font-family:var(--mono);font-size:11.5px}
+.seg button{background:none;border:0;padding:5px 10px;border-radius:999px;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.icon{width:32px;height:32px;border:1px solid var(--line);border-radius:999px;background:none;display:grid;place-items:center;cursor:pointer;color:var(--muted)}
+.icon:hover{color:var(--fg)}
+.icon svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* hero */
+.hero{padding-block:56px 24px}
+.hero h1{font-size:clamp(40px,6.4vw,96px);line-height:.98;letter-spacing:-.025em;max-width:16ch;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .sub{display:flex;flex-wrap:wrap;gap:12px 36px;align-items:flex-end;justify-content:space-between;margin-top:26px}
+.hero p{margin:0;max-width:58ch;color:var(--muted);font-size:16px}
+.proof{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.02em}
+.proof b{color:var(--fg);font-weight:500}
+.reel{position:relative;margin-top:34px;border-radius:16px;overflow:hidden;background:#000;aspect-ratio:16/9;max-width:100%;border:1px solid var(--line);
+  transform-origin:50% 0;will-change:transform,opacity}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.reel .hud{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:10px;pointer-events:none}
+.reel .hud > *{pointer-events:auto}
+.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:8px 14px;font-size:12.5px;font-family:var(--mono);cursor:pointer;backdrop-filter:blur(8px)}
+.pill:hover{background:rgba(0,0,0,.75)}
+.pill .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+/* sections */
+section{padding-block:72px 8px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.sh h2{font-size:clamp(30px,3.6vw,46px);letter-spacing:-.02em;line-height:1.05}
+.sh h2 em{font-style:italic;color:var(--accent)}
+.sh p{margin:0;color:var(--muted);max-width:52ch;font-size:14.5px}
+.k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:12px}
+
+/* tiles */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.grid.sel{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.tile{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:12px;overflow:hidden;background:var(--card);border:1px solid var(--line);cursor:pointer;padding:0;text-align:left;display:block;width:100%;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),border-color .3s}
+.tile img,.tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.tile video{opacity:0;transition:opacity .35s}
+.tile.playing video{opacity:1}
+.tile .cap{position:absolute;inset:auto 0 0 0;padding:40px 12px 12px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.tile .cap b{font-weight:600;font-size:12.5px;line-height:1.3;letter-spacing:-.005em}
+.tile .cap span{font-family:var(--mono);font-size:11px;opacity:.75;flex:none}
+.tile .badge{position:absolute;top:10px;left:10px;background:var(--accent);color:var(--accent-ink);font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;padding:4px 8px;border-radius:999px}
+@media (hover:hover){.tile:hover{transform:translateY(-4px);border-color:var(--accent)}}
+
+/* chips */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{background:none;border:1px solid var(--line);color:var(--muted);padding:9px 15px;border-radius:999px;cursor:pointer;font-size:13.5px;display:flex;gap:8px;align-items:center;transition:all .2s}
+.chip small{font-family:var(--mono);font-size:11px;opacity:.7}
+.chip:hover{color:var(--fg);border-color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+
+/* hooks lab */
+.lab{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.lab .tile .cap b{font-family:var(--mono);font-weight:500;font-size:11.5px}
+
+/* languages */
+.langwrap{display:grid;grid-template-columns:minmax(0,360px) 1fr;gap:36px;align-items:start}
+.langwrap .player{position:relative;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:#000;border:1px solid var(--line);max-width:100%}
+.langwrap .player video{width:100%;height:100%;object-fit:cover;display:block}
+.langs{display:flex;flex-wrap:wrap;gap:8px}
+.langs button{background:none;border:1px solid var(--line);color:var(--muted);padding:9px 13px;border-radius:8px;cursor:pointer;font-family:var(--mono);font-size:12.5px;min-width:54px}
+.langs button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.langs button:hover{border-color:var(--muted);color:var(--fg)}
+.langnote{color:var(--muted);font-size:14.5px;max-width:52ch;margin:0 0 18px}
+.langtitle{font-size:28px;letter-spacing:-.01em;margin-bottom:8px}
+.langmeta{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:14px}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{border-top:1px solid var(--line);padding-top:16px}
+.step i{font-family:var(--display);font-style:italic;font-size:34px;color:var(--accent);display:block;line-height:1;margin-bottom:10px}
+.step b{display:block;font-weight:600;margin-bottom:6px}
+.step p{margin:0;color:var(--muted);font-size:13.5px}
+.tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px}
+.tools i{font-style:normal;font-family:var(--mono);font-size:11.5px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:4px 9px}
+
+/* contact */
+.contact{padding-block:80px 56px;border-top:1px solid var(--line);margin-top:70px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:end}
+.contact h2{font-size:clamp(34px,4.6vw,64px);letter-spacing:-.025em;line-height:1}
+.contact h2 em{font-style:italic;color:var(--accent)}
+.mail{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+.mail code{font-family:var(--mono);font-size:clamp(15px,2vw,22px);user-select:all}
+.copy{background:none;border:1px solid var(--line);color:var(--muted);font-family:var(--mono);font-size:11.5px;border-radius:6px;padding:6px 10px;cursor:pointer}
+.links{display:flex;flex-direction:column;gap:10px;font-size:14.5px;color:var(--muted)}
+.links a{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.links a:hover{color:var(--fg)}
+.foot{font-family:var(--mono);font-size:11.5px;color:var(--dim);padding-block:18px 40px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);filter:blur(6px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1),filter .8s}
+.rv.in{opacity:1;transform:none;filter:none}
+.no-js .rv,.reduced .rv{opacity:1;transform:none;filter:none;transition:none}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(6,6,8,.94);z-index:60;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;color:#fff;
+  padding:calc(env(safe-area-inset-top,0px) + 18px) max(18px,env(safe-area-inset-right,0px)) calc(env(safe-area-inset-bottom,0px) + 18px) max(18px,env(safe-area-inset-left,0px))}
+.modal[hidden]{display:none!important}
+.stage{display:grid;place-items:center;min-width:0;min-height:0}
+.stage video{height:calc(100vh - 36px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));max-height:100%;max-width:100%;aspect-ratio:9/16;background:#000;border-radius:14px}
+.side{display:flex;flex-direction:column;gap:14px;justify-content:center;min-width:0}
+.side .k{color:#8d8a83}
+.side h3{font-size:30px;letter-spacing:-.015em;line-height:1.1}
+.side .meta{font-family:var(--mono);font-size:12px;color:#a5a29b}
+.side .tg{display:flex;flex-wrap:wrap;gap:6px}
+.side .tg i{font-style:normal;font-family:var(--mono);font-size:11.5px;border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:4px 9px;color:#ddd}
+.side .langs button{color:#bbb;border-color:rgba(255,255,255,.18)}
+.navb{display:flex;gap:8px;margin-top:6px}
+.pb{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);color:#fff;padding:10px 16px;border-radius:9px;cursor:pointer;font-size:13px}
+.pb:hover{background:rgba(255,255,255,.14)}
+.pb.x{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);right:max(14px,env(safe-area-inset-right,0px));z-index:61;width:40px;height:40px;padding:0;border-radius:50%}
+
+@media (max-width:980px){
+  .nav{display:none}
+  .lab{grid-template-columns:repeat(3,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .langwrap{grid-template-columns:1fr}
+  .langwrap .player{max-width:360px}
+  .contact{grid-template-columns:1fr}
+  .modal{grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto}
+  .stage video{height:auto;max-height:60vh}
+  .side{justify-content:flex-start}
+}
+@media (max-width:560px){
+  .grid,.grid.sel{grid-template-columns:repeat(2,1fr);gap:10px}
+  .lab{grid-template-columns:repeat(2,1fr)}
+  .hero{padding-block:36px 16px}
+  .brand small{display:none}
+}
+@media (prefers-reduced-motion:reduce){.rv{transition:none;opacity:1;transform:none;filter:none}.tile{transition:none}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="#top">Artsiom Kobyzev <small data-i="role"></small></a>
+  <nav class="nav">
+    <a href="#work" data-i="nWork"></a><a href="#lab" data-i="nLab"></a><a href="#langs" data-i="nLangs"></a><a href="#contact" data-i="nContact"></a>
+  </nav>
+  <div class="ctl">
+    <div class="seg" role="group" aria-label="Language"><button type="button" id="lang-en" aria-pressed="true">EN</button><button type="button" id="lang-ru" aria-pressed="false">RU</button></div>
+    <button type="button" class="icon" id="theme" aria-label="Theme">
+      <svg viewBox="0 0 24 24"><path id="th-sun" d="M12 4V2M12 22v-2M4.9 4.9 3.5 3.5M20.5 20.5l-1.4-1.4M4 12H2M22 12h-2M4.9 19.1l-1.4 1.4M20.5 3.5l-1.4 1.4"/><circle id="th-c" cx="12" cy="12" r="4"/></svg>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="top" style="padding-top:48px">
+  <h1 class="serif rv" data-i="h1"></h1>
+  <div class="sub rv">
+    <p data-i="lead"></p>
+  </div>
+  <div class="reel rv" id="reel">
+    <video id="reelv" muted autoplay loop playsinline preload="auto" poster="showreel.jpg"><source src="showreel.mp4" type="video/mp4"></video>
+    <div class="hud">
+      <button type="button" class="pill" id="snd"><span class="dot"></span><span data-i="sound"></span></button>
+      <span class="pill" style="cursor:default" data-i="reelTag"></span>
+    </div>
+  </div>
+</section>
+
+<section id="selected">
+  <div class="sh rv"><h2 class="serif" data-i="selH"></h2><p data-i="selP"></p></div>
+  <div class="grid sel" id="selGrid"></div>
+</section>
+
+<section id="work">
+  <div class="sh rv"><h2 class="serif" data-i="workH"></h2><p data-i="workP"></p></div>
+  <div class="chips rv" id="chips"></div>
+  <div class="grid" id="workGrid"></div>
+</section>
+
+<section id="lab">
+  <div class="sh rv"><h2 class="serif" data-i="labH"></h2><p data-i="labP"></p></div>
+  <div class="lab" id="labGrid"></div>
+</section>
+
+<section id="langs">
+  <div class="sh rv"><h2 class="serif" data-i="langH"></h2><p data-i="langP"></p></div>
+  <div class="langwrap rv">
+    <div class="player"><video id="langv" controls playsinline preload="metadata"></video></div>
+    <div>
+      <span class="k" data-i="langK"></span>
+      <div class="langtitle serif" id="langTitle"></div>
+      <p class="langnote" data-i="langNote"></p>
+      <div class="langs" id="langBtns"></div>
+      <div class="langmeta" id="langMeta"></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="sh rv"><h2 class="serif" data-i="procH"></h2><p data-i="procP"></p></div>
+  <div class="steps rv" id="steps"></div>
+  <div class="tools rv" id="tools"></div>
+</section>
+
+<section class="contact rv" id="contact">
+  <div>
+    <h2 class="serif" data-i="cH"></h2>
+    <p class="langnote" data-i="cP" style="margin-top:14px"></p>
+    <div class="mail"><code>3602921@gmail.com</code><button type="button" class="copy" id="copy" data-i="copy"></button></div>
+  </div>
+  <div class="links">
+    <a href="https://t.me/artiechoke" target="_blank" rel="noopener"><span data-i="lTg"></span><span>↗</span></a>
+    <a href="https://drive.google.com/drive/folders/1xIWFA0QjNEG7GnNJdViEcpNX6xYUPnid" target="_blank" rel="noopener"><span data-i="lDrive"></span><span>↗</span></a>
+    <a href="#top"><span data-i="lTop"></span><span>↑</span></a>
+  </div>
+</section>
+<div class="foot"><span>© 2026 Artsiom Kobyzev</span></div>
+</div>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true">
+  <button type="button" class="pb x" id="close" aria-label="Close">✕</button>
+  <div class="stage"><video id="mv" controls playsinline preload="auto"></video></div>
+  <div class="side">
+    <span class="k" id="mCat"></span>
+    <h3 class="serif" id="mTitle"></h3>
+    <div class="meta" id="mMeta"></div>
+    <div class="tg" id="mTools"></div>
+    <div class="langs" id="mLangs" hidden></div>
+    <div class="navb"><button type="button" class="pb" id="prev"></button><button type="button" class="pb" id="next"></button></div>
+  </div>
+</div>
+
+<script>
+const DATA={"selected":["755","760b","774","881","718","958"],"hooks_lab":["755h1","755h2","755h3","755h4","755h5"],"lang_groups":{"811v20en":{"EN":"811v20en","AR":"811ar","CS":"811cs","DE":"811de","EL":"811el","ES":"811es","FI":"811fi","FR":"811fr","IT":"811it","JP":"811jp","NL":"811nl","NO":"811no","PL":"811pl","PT":"811pt","RO":"811ro","RU":"811ru","SV":"811sv"},"648en":{"EN":"648en","AR":"648ar","DE":"648de","ES":"648es","FR":"648fr","IT":"648it","JP":"648jp","NL":"648nl"}},"items":[{"id":"755","cat":"ugc","dur":27,"en":"Soulmate sketch, uniform reactions","ru":"Скетч соулмейта, реакции в униформе","tools":["Nano Banana","Kling","ElevenLabs","CapCut"],"v":"755.mp4","p":"755.jpg"},{"id":"951","cat":"ugc","dur":60,"en":"Sketch reactions, 60 second cut","ru":"Реакции на скетч, 60 секунд","tools":["Nano Banana","Seedance","CapCut"],"v":"951.mp4","p":"951.jpg"},{"id":"958","cat":"ugc","dur":25,"en":"Karmic, toxic or soulmate","ru":"Кармический, токсичный или соулмейт","tools":["Nano Banana","Kling","CapCut"],"v":"958.mp4","p":"958.jpg"},{"id":"620","cat":"ugc","dur":26,"en":"Karmic, toxic or soulmate, first version","ru":"Кармический, токсичный, соулмейт, первая версия","tools":["Nano Banana","Kling","CapCut"],"v":"620.mp4","p":"620.jpg"},{"id":"921","cat":"ugc","dur":19,"en":"Car couple hook","ru":"Пара в машине","tools":["Seedance","ElevenLabs","CapCut"],"v":"921.mp4","p":"921.jpg"},{"id":"909","cat":"ugc","dur":33,"en":"Talking head, stranger story","ru":"Говорящая голова, история незнакомца","tools":["HeyGen","ElevenLabs","CapCut"],"v":"909.mp4","p":"909.jpg"},{"id":"721","cat":"ugc","dur":15,"en":"Birthday color","ru":"Цвет дня рождения","tools":["Seedance","After Effects","CapCut"],"v":"721.mp4","p":"721.jpg"},{"id":"669","cat":"ugc","dur":29,"en":"Couple test, talking UGC","ru":"Тест пары, говорящий UGC","tools":["Kling","ElevenLabs","CapCut"],"v":"669.mp4","p":"669.jpg"},{"id":"691","cat":"ugc","dur":30,"en":"You and your soulmate","ru":"Ты и твой соулмейт","tools":["Kling","After Effects","CapCut"],"v":"691.mp4","p":"691.jpg"},{"id":"530","cat":"ugc","dur":25,"en":"Dating apps failed","ru":"Дейтинг не сработал","tools":["Nano Banana","Kling","CapCut"],"v":"530.mp4","p":"530.jpg"},{"id":"473","cat":"ugc","dur":22,"en":"Mom and baby, past life","ru":"Мама с малышом, прошлая жизнь","tools":["Kling","After Effects","CapCut"],"v":"473.mp4","p":"473.jpg"},{"id":"904","cat":"ugc","dur":20,"en":"Moon phases, new people","ru":"Фазы луны, новые люди","tools":["Nano Banana","Kling","CapCut"],"v":"904.mp4","p":"904.jpg"},{"id":"885","cat":"ugc","dur":21,"en":"Kid with a sign","ru":"Ребёнок с табличкой","tools":["Nano Banana","Seedance","CapCut"],"v":"885.mp4","p":"885.jpg"},{"id":"760b","cat":"drama","dur":48,"en":"Street astrologer","ru":"Уличный астролог","tools":["Seedance","Nano Banana","ElevenLabs"],"v":"760b.mp4","p":"760b.jpg"},{"id":"881","cat":"drama","dur":52,"en":"Lucky guess","ru":"Счастливая догадка","tools":["Seedance","Omni Control","CapCut"],"v":"881.mp4","p":"881.jpg"},{"id":"911","cat":"drama","dur":31,"en":"Street interview, past lives","ru":"Уличное интервью, прошлые жизни","tools":["Seedance","After Effects","ElevenLabs"],"v":"911.mp4","p":"911.jpg"},{"id":"733","cat":"drama","dur":53,"en":"TV show sketch","ru":"Скетч в ТВ-шоу","tools":["Nano Banana","Kling","ElevenLabs"],"v":"733.mp4","p":"733.jpg"},{"id":"793","cat":"drama","dur":30,"en":"Sketch artist confession","ru":"Признание художника","tools":["Seedance","ElevenLabs","CapCut"],"v":"793.mp4","p":"793.jpg"},{"id":"867","cat":"drama","dur":62,"en":"Cafe stranger","ru":"Незнакомка в кафе","tools":["Seedance","Nano Banana","ElevenLabs"],"v":"867.mp4","p":"867.jpg"},{"id":"818","cat":"drama","dur":73,"en":"Birth chart street drama","ru":"Уличная драма с натальной картой","tools":["Seedance","Kling","CapCut"],"v":"818.mp4","p":"818.jpg"},{"id":"774","cat":"anim","dur":126,"en":"Family drama, lunar phase","ru":"Семейная драма, лунная фаза","tools":["Nano Banana","Kling","ElevenLabs","CapCut"],"v":"774.mp4","p":"774.jpg"},{"id":"798","cat":"anim","dur":154,"en":"Friends and the moon sign","ru":"Подруги и лунный знак","tools":["Nano Banana","Seedance","ElevenLabs"],"v":"798.mp4","p":"798.jpg"},{"id":"860","cat":"anim","dur":48,"en":"Moon connection story","ru":"История лунной связи","tools":["Nano Banana","Kling","After Effects"],"v":"860.mp4","p":"860.jpg"},{"id":"718","cat":"hooks","dur":25,"en":"5 signs, horror hook","ru":"5 признаков, хоррор-хук","tools":["Nano Banana","Kling","CapCut"],"v":"718.mp4","p":"718.jpg"},{"id":"920","cat":"hooks","dur":25,"en":"Nun and Rumpelstiltskin","ru":"Монахиня и Румпельштильцхен","tools":["Nano Banana","Kling","CapCut"],"v":"920.mp4","p":"920.jpg"},{"id":"844","cat":"hooks","dur":25,"en":"Vampire dolls","ru":"Куклы-вампиры","tools":["Nano Banana","Kling"],"v":"844.mp4","p":"844.jpg"},{"id":"871","cat":"hooks","dur":20,"en":"Dracula with ice cream","ru":"Дракула с мороженым","tools":["Nano Banana","Seedance"],"v":"871.mp4","p":"871.jpg"},{"id":"845","cat":"hooks","dur":43,"en":"Old witch and dolls","ru":"Старая ведьма и куклы","tools":["Kling","CapCut"],"v":"845.mp4","p":"845.jpg"},{"id":"795","cat":"hooks","dur":25,"en":"Grandma at the car","ru":"Бабушка у машины","tools":["Nano Banana","Kling"],"v":"795.mp4","p":"795.jpg"},{"id":"856","cat":"hooks","dur":25,"en":"Pumpkin boy","ru":"Мальчик с тыквой","tools":["Nano Banana","Kling"],"v":"856.mp4","p":"856.jpg"},{"id":"675","cat":"hooks","dur":25,"en":"Mummy","ru":"Мумия","tools":["Nano Banana","Kling"],"v":"675.mp4","p":"675.jpg"},{"id":"595","cat":"hooks","dur":25,"en":"Pharaoh","ru":"Фараон","tools":["Nano Banana","Kling"],"v":"595.mp4","p":"595.jpg"},{"id":"695","cat":"hooks","dur":24,"en":"Black and white seance","ru":"Чёрно-белый сеанс","tools":["Nano Banana","Kling","After Effects"],"v":"695.mp4","p":"695.jpg"},{"id":"666","cat":"hooks","dur":18,"en":"Door peephole","ru":"Дверной глазок","tools":["Kling","CapCut"],"v":"666.mp4","p":"666.jpg"},{"id":"759","cat":"hooks","dur":92,"en":"Witch type by birthday","ru":"Тип ведьмы по дню рождения","tools":["Nano Banana","Kling","CapCut"],"v":"759.mp4","p":"759.jpg"},{"id":"527","cat":"mg","dur":15,"en":"Moon chevrons","ru":"Луна и шевроны","tools":["After Effects","CapCut"],"v":"527.mp4","p":"527.jpg"},{"id":"892","cat":"mg","dur":15,"en":"Golden fire horse","ru":"Золотой огненный конь","tools":["Google Flow","CapCut"],"v":"892.mp4","p":"892.jpg"},{"id":"952","cat":"mg","dur":11,"en":"Baby scan","ru":"Скан малыша","tools":["Nano Banana","After Effects"],"v":"952.mp4","p":"952.jpg"},{"id":"811","cat":"mg","dur":20,"en":"Writing on the belly","ru":"Надпись на животе","tools":["Kling","After Effects","CapCut"],"v":"811.mp4","p":"811.jpg"},{"id":"906","cat":"mg","dur":12,"en":"Night drive text ad","ru":"Ночная дорога, текстовый ролик","tools":["Google Flow","CapCut"],"v":"906.mp4","p":"906.jpg"},{"id":"653","cat":"mg","dur":20,"en":"Witch by blood","ru":"Ведьма по крови","tools":["Kling","After Effects"],"v":"653.mp4","p":"653.jpg"},{"id":"684","cat":"mg","dur":29,"en":"AI avatar, moon match","ru":"AI-аватар, лунный мэтч","tools":["HeyGen","After Effects","CapCut"],"v":"684.mp4","p":"684.jpg"},{"id":"551","cat":"mg","dur":17,"en":"Moon child book","ru":"Книга лунного ребёнка","tools":["After Effects","CapCut"],"v":"551.mp4","p":"551.jpg"},{"id":"644","cat":"mg","dur":23,"en":"Waterfall and moon UI","ru":"Водопад и лунный интерфейс","tools":["Kling","After Effects"],"v":"644.mp4","p":"644.jpg"},{"id":"713","cat":"mg","dur":15,"en":"Cheese moon phases","ru":"Сырные фазы луны","tools":["Nano Banana","CapCut"],"v":"713.mp4","p":"713.jpg"},{"id":"673","cat":"mg","dur":15,"en":"Notes app banner","ru":"Баннер в заметках","tools":["Nano Banana","CapCut"],"v":"673.mp4","p":"673.jpg"},{"id":"ban","cat":"mg","dur":15,"en":"Animated banner","ru":"Анимированный баннер","tools":["After Effects"],"v":"ban.mp4","p":"ban.jpg"},{"id":"811v20en","cat":"loc","dur":20,"en":"One ad, 17 languages","ru":"Один ролик, 17 языков","tools":["After Effects JSX","ElevenLabs","CapCut"],"v":"811v20en.mp4","p":"811v20en.jpg"},{"id":"648en","cat":"loc","dur":27,"en":"Military couples, 8 languages","ru":"Пары военных, 8 языков","tools":["After Effects JSX","ElevenLabs","CapCut"],"v":"648en.mp4","p":"648en.jpg"},{"id":"622ar","cat":"loc","dur":25,"en":"Past lives, Arabic","ru":"Прошлые жизни, арабский","tools":["After Effects JSX","ElevenLabs"],"v":"622ar.mp4","p":"622ar.jpg"},{"id":"241pt","cat":"loc","dur":25,"en":"Moon relationship, Portuguese","ru":"Отношения и луна, португальский","tools":["ElevenLabs","CapCut"],"v":"241pt.mp4","p":"241pt.jpg"}],"extra":{"760":{"v":"760.mp4","p":"760.jpg"},"811ar":{"v":"811ar.mp4","p":"811ar.jpg"},"648ar":{"v":"648ar.mp4","p":"648ar.jpg"},"648de":{"v":"648de.mp4","p":"648de.jpg"},"648es":{"v":"648es.mp4","p":"648es.jpg"},"648fr":{"v":"648fr.mp4","p":"648fr.jpg"},"648it":{"v":"648it.mp4","p":"648it.jpg"},"648jp":{"v":"648jp.mp4","p":"648jp.jpg"},"648nl":{"v":"648nl.mp4","p":"648nl.jpg"},"755h1":{"v":"755h1.mp4","p":"755h1.jpg"},"755h2":{"v":"755h2.mp4","p":"755h2.jpg"},"755h3":{"v":"755h3.mp4","p":"755h3.jpg"},"755h4":{"v":"755h4.mp4","p":"755h4.jpg"},"755h5":{"v":"755h5.mp4","p":"755h5.jpg"},"811cs":{"v":"811cs.mp4","p":"811cs.jpg"},"811de":{"v":"811de.mp4","p":"811de.jpg"},"811el":{"v":"811el.mp4","p":"811el.jpg"},"811es":{"v":"811es.mp4","p":"811es.jpg"},"811fi":{"v":"811fi.mp4","p":"811fi.jpg"},"811fr":{"v":"811fr.mp4","p":"811fr.jpg"},"811it":{"v":"811it.mp4","p":"811it.jpg"},"811jp":{"v":"811jp.mp4","p":"811jp.jpg"},"811nl":{"v":"811nl.mp4","p":"811nl.jpg"},"811no":{"v":"811no.mp4","p":"811no.jpg"},"811pl":{"v":"811pl.mp4","p":"811pl.jpg"},"811pt":{"v":"811pt.mp4","p":"811pt.jpg"},"811ro":{"v":"811ro.mp4","p":"811ro.jpg"},"811ru":{"v":"811ru.mp4","p":"811ru.jpg"},"811sv":{"v":"811sv.mp4","p":"811sv.jpg"}}};
+const ITEMS=DATA.items, BY=Object.fromEntries(ITEMS.map(i=>[i.id,i]));
+const CATS=[
+ {id:"ugc",en:"AI UGC, photoreal people",ru:"AI UGC, фотореалистичные люди"},
+ {id:"drama",en:"Short drama",ru:"Короткие драмы"},
+ {id:"anim",en:"3D animation",ru:"3D-анимация"},
+ {id:"hooks",en:"Hooks",ru:"Хуки"},
+ {id:"mg",en:"Motion graphics and banners",ru:"Моушн-графика и баннеры"},
+ {id:"loc",en:"Localization",ru:"Локализация"}
+];
+const LANGNAME={EN:"English",AR:"العربية",CS:"Čeština",DE:"Deutsch",EL:"Ελληνικά",ES:"Español",FI:"Suomi",FR:"Français",IT:"Italiano",JP:"日本語",NL:"Nederlands",NO:"Norsk",PL:"Polski",PT:"Português",RO:"Română",RU:"Русский",SV:"Svenska"};
+const T={
+ en:{role:"AI Motion Designer",nWork:"Work",nLab:"Hook variations",nLangs:"Languages",nContact:"Contact",
+  h1:"Video ads built with <em>generative AI</em>, from idea to export.",
+  lead:"Motion designer and AI creative, 2.5 years in performance marketing for mobile apps at Wowmaking. I make video creatives for Meta, TikTok and Google end to end: product and competitor research, concept, script, video generation, voice-over, editing, subtitles, variations and localization into any language.",
+  sound:"Sound on",soundOff:"Mute",reelTag:"Showreel · 39 s",
+  selH:"Selected <em>work</em>",selP:"Six pieces across the formats: photoreal UGC, street drama, 3D story, multi-shot scene, horror hook, couples test.",
+  workH:"Work, <em>last months</em>",workP:"A selection from the last months of work. Hover to preview, click to watch with sound, filter by format.",all:"All",
+  labH:"Hook <em>variations</em>",labP:"One body, five different openers. Only the first seconds change: another person, another line, another setting. One concept becomes a batch of versions for testing.",
+  langH:"One ad, <em>17 languages</em>",langP:"On-screen text replaced, voice re-recorded in the same tone, right-to-left layout rebuilt where needed. Pick a language.",
+  langK:"Localization",langNote:"Burned-in text is cut out of every frame and rebuilt in the new language, the voice-over is regenerated with ElevenLabs, timing and music stay frame-exact.",
+  procH:"How I <em>work</em>",procP:"Full cycle from idea to finished creative, one person.",
+  steps:[["Research","Product, competitors, top performing creatives in Meta Ad Library and TikTok Creative Center."],["Script and board","Hooks written around audience triggers, storyboard, casting of characters."],["Generate and voice","Nano Banana, Seedance, Kling, Veo via Google Flow, Higgsfield. Voices and avatars with ElevenLabs and HeyGen."],["Edit and scale","CapCut and After Effects, subtitles, CTA, hook variations, localization. Routine automated with Claude Code."]],
+  cH:"<em>Contact</em>",cP:"Artsiom Kobyzev, Belarus. Open to remote work and relocation. Russian native, English B1.",copy:"copy",copied:"copied",lDrive:"All files on Google Drive",lTg:"Telegram @artiechoke",lTop:"Back to top",prev:"Previous",next:"Next",langsLabel:"Languages",
+  catName:c=>CATS.find(x=>x.id===c).en},
+ ru:{role:"AI Motion Designer",nWork:"Работы",nLab:"Вариации хуков",nLangs:"Языки",nContact:"Контакты",
+  h1:"Видеореклама на <em>генеративном AI</em>, от идеи до экспорта.",
+  lead:"Моушн-дизайнер и AI-креативщик, 2,5 года в перформанс-маркетинге мобильных приложений в Wowmaking. Делаю видеокреативы для Meta, TikTok и Google под ключ: анализ продукта и конкурентов, идея, сценарий, генерация видео, озвучка, монтаж, субтитры, вариации и локализация на любые языки.",
+  sound:"Включить звук",soundOff:"Без звука",reelTag:"Шоурил · 39 с",
+  selH:"Избранное",selP:"Шесть работ по форматам: фотореалистичный UGC, уличная драма, 3D-история, многокадровая сцена, хоррор-хук, тест для пар.",
+  workH:"Работы за <em>последние месяцы</em>",workP:"Выборка из работ за последние месяцы. Наведите для превью, кликните, чтобы смотреть со звуком, фильтр по формату.",all:"Все",
+  labH:"Вариации <em>хуков</em>",labP:"Одно тело, пять разных начал. Меняются только первые секунды: другой человек, другая реплика, другая обстановка. Из одного концепта получается пачка версий для теста.",
+  langH:"Один ролик, <em>17 языков</em>",langP:"Текст в кадре заменён, голос переозвучен в той же интонации, вёрстка справа налево перестроена где нужно. Выберите язык.",
+  langK:"Локализация",langNote:"Вшитый текст вырезается из каждого кадра и пересобирается на новом языке, озвучка генерируется заново в ElevenLabs, тайминг и музыка остаются кадр в кадр.",
+  procH:"Как я <em>работаю</em>",procP:"Полный цикл от идеи до готового ролика, один человек.",
+  steps:[["Ресёрч","Продукт, конкуренты, лучшие перформящие креативы в Meta Ad Library и TikTok Creative Center."],["Сценарий и раскадровка","Хуки под триггеры аудитории, раскадровка, кастинг персонажей."],["Генерация и голос","Nano Banana, Seedance, Kling, Veo через Google Flow, Higgsfield. Голоса и аватары в ElevenLabs и HeyGen."],["Монтаж и масштаб","CapCut и After Effects, субтитры, CTA, вариации хуков, локализация. Рутина автоматизирована через Claude Code."]],
+  cH:"<em>Контакты</em>",cP:"Артём Кобызев, Беларусь. Открыт к удалённой работе и релокации. Русский родной, английский B1.",copy:"копировать",copied:"скопировано",lDrive:"Все файлы на Google Drive",lTg:"Telegram @artiechoke",lTop:"Наверх",prev:"Назад",next:"Дальше",langsLabel:"Языки",
+  catName:c=>CATS.find(x=>x.id===c).ru}
+};
+const TOOLS=["CapCut","After Effects","DaVinci Resolve","Premiere Pro","Seedance","Kling","Veo 3","Google Flow","Nano Banana","Higgsfield","Replicate","ElevenLabs","HeyGen","Claude Code","Photoshop","Illustrator","Canva","Capture One"];
+let lang="en",filter="all",list=[],cur=0,curLang="EN";
+try{const s=localStorage.getItem("pf-lang");if(s==="ru"||s==="en")lang=s;}catch(e){}
+try{const t=localStorage.getItem("pf-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t;}catch(e){}
+const $=s=>document.querySelector(s);
+const blob=id=>id;
+const REF=id=>BY[id]||DATA.extra[id];
+const fmt=d=>{const m=Math.floor(d/60),s=Math.round(d%60);return `${m}:${String(s).padStart(2,"0")}`};
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function tile(i,extra=""){
+  const t=T[lang];const g=DATA.lang_groups[i.id];
+  const badge=g?`<span class="badge">${Object.keys(g).length} ${t.langsLabel.toLowerCase()}</span>`:"";
+  return `<button type="button" class="tile ${extra}" data-id="${i.id}" aria-label="${esc(i[lang])}"><img src="${blob(i.p)}" alt="" loading="lazy"><video muted loop playsinline preload="none" data-src="${blob(i.v)}"></video>${badge}<span class="cap"><b>${esc(i[lang])}</b><span>${fmt(i.dur)}</span></span></button>`;
+}
+function renderStatic(){
+  const t=T[lang];
+  document.querySelectorAll("[data-i]").forEach(el=>{const k=el.dataset.i;if(!(k in t))return;if(/^(h1|selH|workH|labH|langH|procH|cH)$/.test(k))el.innerHTML=t[k];else el.textContent=t[k]});
+  $("#lang-en").setAttribute("aria-pressed",lang==="en");$("#lang-ru").setAttribute("aria-pressed",lang==="ru");
+  $("#steps").innerHTML=t.steps.map(([h,p],k)=>`<div class="step"><i>0${k+1}</i><b>${h}</b><p>${p}</p></div>`).join("");
+  $("#tools").innerHTML=TOOLS.map(s=>`<i>${s}</i>`).join("");
+  $("#snd").querySelector("[data-i]").textContent=$("#reelv").muted?t.sound:t.soundOff;
+  document.documentElement.lang=lang;
+}
+function renderSelected(){$("#selGrid").innerHTML=DATA.selected.map(id=>tile(BY[id])).join("")}
+function renderChips(){
+  const t=T[lang];
+  const chips=[{id:"all",n:ITEMS.length,label:t.all},...CATS.map(c=>({id:c.id,n:ITEMS.filter(i=>i.cat===c.id).length,label:c[lang]}))];
+  $("#chips").innerHTML=chips.map(c=>`<button type="button" class="chip" data-cat="${c.id}" aria-pressed="${filter===c.id}">${c.label}<small>${c.n}</small></button>`).join("");
+}
+function renderWork(){
+  const its=filter==="all"?ITEMS:ITEMS.filter(i=>i.cat===filter);
+  $("#workGrid").innerHTML=its.map(i=>tile(i)).join("");
+  observeAll();
+}
+function renderLab(){$("#labGrid").innerHTML=DATA.hooks_lab.map((id,k)=>{const i=Object.assign({},BY[id]||Object.assign({id,dur:27,cat:"ugc"},DATA.extra[id]));i[lang]=(lang==="en"?"Hook ":"Хук ")+(k+1);return tile(i)}).join("")}
+function renderLangs(){
+  const g=DATA.lang_groups["811v20en"];
+  $("#langTitle").textContent=BY["811v20en"][lang];
+  $("#langBtns").innerHTML=Object.keys(g).map(l=>`<button type="button" data-l="${l}" aria-pressed="${l===curLang}" title="${LANGNAME[l]}">${l}</button>`).join("");
+  $("#langMeta").textContent=Object.keys(g).map(l=>LANGNAME[l]).join(" · ");
+  const v=$("#langv");const ref=REF(g[curLang]);const src=blob(ref.v);if(!v.src.endsWith(src)){v.src=src;v.poster=blob(ref.p);}
+}
+function renderAll(){renderStatic();renderSelected();renderChips();renderWork();renderLab();renderLangs();observeAll()}
+/* theme */
+function applyThemeIcon(){const dark=!(document.documentElement.dataset.theme==="light"||(!document.documentElement.dataset.theme&&matchMedia("(prefers-color-scheme: light)").matches));$("#th-sun").style.display=dark?"":"none";$("#th-c").setAttribute("r",dark?"4":"6")}
+$("#theme").addEventListener("click",()=>{const cur=document.documentElement.dataset.theme||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");const next=cur==="dark"?"light":"dark";document.documentElement.dataset.theme=next;try{localStorage.setItem("pf-theme",next)}catch(e){}applyThemeIcon()});
+/* events */
+document.addEventListener("click",e=>{
+  const l=e.target.closest(".seg button");if(l){lang=l.id==="lang-ru"?"ru":"en";try{localStorage.setItem("pf-lang",lang)}catch(x){}renderAll();if(!$("#modal").hidden)fillModal(false);return}
+  const ch=e.target.closest(".chip");if(ch){filter=ch.dataset.cat;renderChips();renderWork();return}
+  const lb=e.target.closest("#langBtns button");if(lb){curLang=lb.dataset.l;renderLangs();$("#langv").play().catch(()=>{});return}
+  const ml=e.target.closest("#mLangs button");if(ml){const i=list[cur];const g=DATA.lang_groups[i.id];const id=g[ml.dataset.l];const v=$("#mv");v.src=blob(REF(id).v);v.play().catch(()=>{});$("#mLangs").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b===ml));return}
+  const td=e.target.closest(".tile");if(td){openModal(td);return}
+  const cp=e.target.closest("#copy");if(cp){const v="3602921@gmail.com";const done=()=>{cp.textContent=T[lang].copied;setTimeout(()=>cp.textContent=T[lang].copy,1500)};const sel=()=>{const r=document.createRange();r.selectNodeContents(cp.previousElementSibling);const s=getSelection();s.removeAllRanges();s.addRange(r)};if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(v).then(done,sel);else sel();return}
+});
+$("#snd").addEventListener("click",()=>{const v=$("#reelv");v.muted=!v.muted;if(!v.muted)v.play().catch(()=>{});$("#snd").querySelector("[data-i]").textContent=v.muted?T[lang].sound:T[lang].soundOff});
+/* hover preview */
+if(matchMedia("(hover:hover)").matches){
+  let tm=null;
+  document.addEventListener("mouseover",e=>{const td=e.target.closest(".tile");if(!td||td.classList.contains("playing"))return;clearTimeout(tm);tm=setTimeout(()=>{const v=td.querySelector("video");if(!v.src)v.src=v.dataset.src;v.currentTime=0;v.play().then(()=>td.classList.add("playing")).catch(()=>{})},160)});
+  document.addEventListener("mouseout",e=>{const td=e.target.closest(".tile");if(!td||td.contains(e.relatedTarget))return;clearTimeout(tm);const v=td.querySelector("video");v.pause();td.classList.remove("playing")});
+}
+/* modal */
+function openModal(td){
+  const grid=td.closest("#labGrid")?"lab":td.closest("#selGrid")?"sel":"work";
+  const ids=[...td.closest(".grid,.lab").querySelectorAll(".tile")].map(b=>b.dataset.id);
+  list=ids.map(id=>BY[id]||Object.assign({id,dur:27,cat:"ugc",en:"Hook variant",ru:"Вариант хука"},DATA.extra[id]));
+  if(grid==="lab")list=list.map((i,k)=>Object.assign({},i,{en:"Hook "+(k+1)+", same body",ru:"Хук "+(k+1)+", то же тело",tools:BY["755"].tools}));
+  cur=Math.max(0,ids.indexOf(td.dataset.id));$("#modal").hidden=false;document.body.style.overflow="hidden";$("#reelv").pause();fillModal(true);$("#close").focus();
+}
+function fillModal(load){
+  const i=list[cur],v=$("#mv"),t=T[lang];
+  if(load&&v.dataset.id!==i.id){v.pause();v.src=blob(i.v);v.poster=blob(i.p);v.dataset.id=i.id;v.load();v.play().catch(()=>{})}
+  $("#mCat").textContent=t.catName(i.cat);$("#mTitle").textContent=i[lang];
+  $("#mMeta").textContent=`9:16 · ${fmt(i.dur)} · ${cur+1} / ${list.length}`;
+  $("#mTools").innerHTML=(i.tools||[]).map(x=>`<i>${x}</i>`).join("");
+  const g=DATA.lang_groups[i.id];const ml=$("#mLangs");
+  if(g){ml.hidden=false;ml.innerHTML=Object.keys(g).map(l=>`<button type="button" data-l="${l}" aria-pressed="${l==="EN"}" title="${LANGNAME[l]}">${l}</button>`).join("")}else{ml.hidden=true;ml.innerHTML=""}
+  $("#prev").textContent=t.prev;$("#next").textContent=t.next;
+}
+function closeModal(){const v=$("#mv");v.pause();v.removeAttribute("src");v.removeAttribute("poster");v.dataset.id="";v.load();$("#modal").hidden=true;document.body.style.overflow="";$("#reelv").play().catch(()=>{})}
+$("#close").addEventListener("click",closeModal);
+$("#prev").addEventListener("click",()=>{cur=(cur-1+list.length)%list.length;fillModal(true)});
+$("#next").addEventListener("click",()=>{cur=(cur+1)%list.length;fillModal(true)});
+$("#mv").addEventListener("ended",()=>{cur=(cur+1)%list.length;fillModal(true)});
+$("#modal").addEventListener("click",e=>{if(e.target===$("#modal")||e.target.classList.contains("stage"))closeModal()});
+document.addEventListener("keydown",e=>{if($("#modal").hidden)return;if(e.key==="Escape")closeModal();if(e.key==="ArrowRight")$("#next").click();if(e.key==="ArrowLeft")$("#prev").click()});
+/* reveal + hero parallax */
+const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;if(reduced)document.documentElement.classList.add("reduced");
+let io=null;
+function observeAll(){
+  if(reduced||!("IntersectionObserver" in window)){document.querySelectorAll(".rv,.tile").forEach(el=>el.classList.add("in"));return}
+  if(!io)io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target)}}),{rootMargin:"0px 0px -8% 0px",threshold:.08});
+  document.querySelectorAll(".rv:not(.in)").forEach(el=>io.observe(el));
+  document.querySelectorAll(".grid .tile:not(.rv), .lab .tile:not(.rv)").forEach((el,k)=>{el.classList.add("rv");el.style.transitionDelay=Math.min(k%8*45,320)+"ms";io.observe(el)});
+}
+if(!reduced){let tick=false;addEventListener("scroll",()=>{if(tick)return;tick=true;requestAnimationFrame(()=>{const r=$("#reel");const y=Math.min(1,Math.max(0,scrollY/700));r.style.transform=`scale(${1-y*.06})`;r.style.opacity=1-y*.55;tick=false})},{passive:true})}
+renderAll();applyThemeIcon();
+</script>
+
+</body>
+</html>
